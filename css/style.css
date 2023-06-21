@@ -3,3 +3,12 @@ body {
     height: 100vh;
     background: linear-gradient(rgb(1,150,136) 120px, rgb(219,219,210) 120px)    
 }
+
+
+.debug{ /* Todo classe per debug iniziale */
+    border: 1px dashed red;
+}
+
+main{
+    height: 90vh;
+}
