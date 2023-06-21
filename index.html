@@ -19,9 +19,9 @@
                         <header class="d-flex justify-content-between align-items-center p-2 bg-light"> <!-- Testa della sidebar -->
                             <div class="d-flex align-items-center"> <!-- Immagine e nome utente -->
                                 <img class="circle" src="img/avatar_io.jpg" alt="la mia foto">
-                                <div class="pe-none">Nome Utente</div>
+                                <div class="pe-none">{{user.name}}</div>
                             </div> 
-                            <div class="d-flex fs-4 gap-3 px-3 my-light-gray"> <!-- Icone varie -->
+                            <div class="d-none d-md-flex fs-4 gap-3 px-3 my-light-gray"> <!-- Icone varie -->
                                 <i class="fa-solid fa-circle-notch"></i>
                                 <i class="fa-solid fa-message"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -32,18 +32,18 @@
                                 <i class="fa-solid fa-bell-slash fs-4 my-light-blue"></i>
                             </div>
                             <div class="p-2"> <!-- Messaggio -->
-                                <div class="fw-semibold pe-none">Ricevi notifiche di nuovi messaggi</div>
-                                <div><a href="#" class="text-secondary">Attiva notifiche desktop</a></div>
+                                <div class="d-none d-lg-block fw-semibold pe-none">Ricevi notifiche di nuovi messaggi</div>
+                                <div class="d-none d-md-block"><a href="#" class="text-secondary">Attiva notifiche desktop</a></div>
                             </div>
                         </div>
                         <form class="d-flex border border-5 border-light" role="search"> <!-- Barra di ricerca -->
                             <span class="input-group-text rounded-0 bg-white border-white" id="inputGroupPrepend"><i class="my-light-gray fa-solid fa-magnifying-glass"></i></span>
                             <input class="form-control rounded-0 border-white" type="search" placeholder="Cerca o inizia una nuova chat">
                         </form>
-                        <div id="contacts"> <!-- Contatti -->
-                            <div class="d-flex align-items-center border-bottom border-light p-2">
-                                <img class="mx-3 circle" src="img/avatar_1.jpg" alt="la foto di avatar_1">
-                                <div class="align-self-start pe-none">Pablo Placeholder</div>
+                        <div id="my-contacts"> <!-- Contatti -->
+                            <div v-for="(contact,i) in contacts" class="d-flex align-items-center border-bottom border-light p-2">
+                                <img class="d-none d-md-block mx-3 circle" src="img/avatar_1.jpg" alt="la foto di avatar_1">
+                                <div class="align-self-start pe-none">{{contact.name}}</div>
                             </div>
                         </div>
                     </section>
