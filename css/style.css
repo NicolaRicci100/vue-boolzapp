@@ -22,9 +22,17 @@ main{
 #sidebar{
     height: 100%;
 }
+
 #contacts{
     height: 100vh;
     overflow-y: auto;
+}
+#contacts > div:hover{
+    background-color: var(--my-gray);
+}
+i:hover{
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 
