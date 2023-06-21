@@ -19,7 +19,7 @@ main{
     height: 90vh;
 }
 
-#sidebar{
+section{
     height: 100%;
 }
 
@@ -27,9 +27,17 @@ main{
     height: 100vh;
     overflow-y: auto;
 }
+
 #contacts > div:hover{
     background-color: var(--my-gray);
 }
+
+#chat-area{
+    height: 100vh;
+    overflow-y: auto;
+    background-image: url(../img/mine.jpg);
+}
+
 i:hover{
     cursor: pointer;
     opacity: 0.5;
