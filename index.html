@@ -16,17 +16,26 @@
             <main class="container bg-white shadow">
                 <div class="row h-100">
                     <section class="col-4 debug g-0"> <!-- Sidebar section -->
-                        <header class="d-flex justify-content-between align-items-center debug p-2 bg-light"> <!-- Testa della sidebar -->
+                        <header class="d-flex justify-content-between align-items-center p-2 bg-light"> <!-- Testa della sidebar -->
                             <div class="d-flex align-items-center"> <!-- Immagine e nome utente -->
-                                <img class="avatar" src="img/avatar_io.jpg" alt="la mia foto">
+                                <img class="circle" src="img/avatar_io.jpg" alt="la mia foto">
                                 <div>Nome Utente</div>
                             </div> 
-                            <div> <!-- Icone varie -->
+                            <div class="d-flex fs-4 gap-3 px-3 my-light-gray"> <!-- Icone varie -->
                                 <i class="fa-solid fa-circle-notch"></i>
                                 <i class="fa-solid fa-message"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </header>
+                        <div class="d-flex align-items-center p-3 my-h-75 my-bg-light-blue"> <!-- Messaggio notifiche -->
+                            <div class="circle bg-white d-flex align-items-center justify-content-center"> <!-- Campanella -->
+                                <i class="fa-solid fa-bell-slash fs-4 my-light-blue"></i>
+                            </div>
+                            <div class="p-2"> <!-- Messaggio -->
+                                <div class="fw-semibold">Ricevi notifiche di nuovi messaggi</div>
+                                <div><u class="text-secondary">Attiva notifiche desktop</u></div>
+                            </div>
+                        </div>
                     </section>
                     <section class="col-8 debug"> <!-- Chat section -->
                         
