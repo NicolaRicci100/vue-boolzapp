@@ -19,6 +19,16 @@ main{
     height: 90vh;
 }
 
+#sidebar{
+    height: 100%;
+}
+#contacts{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+/** CLASSI ESTETICHE RIUTILIZZATE **/
 .circle{ /* cerchio */
     width: 50px;
     height: 50px;
