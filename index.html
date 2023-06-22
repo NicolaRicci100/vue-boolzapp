@@ -50,9 +50,9 @@
                     <section id="chat" class="col-8 g-0 d-flex flex-column"> <!-- Sezione Chat -->
                         <div class="d-flex justify-content-between align-items-center p-2 bg-light"> <!-- Testa della chat -->
                             <div class="d-flex align-items-center"> <!-- Immagine, nome e informazioni accesso -->
-                                <img class="circle mx-2" src="img/avatar_1.jpg" alt="la foto di avatar_1">
+                                <img class="circle mx-2" :src="mountImg(contacts[0])" :alt="contacts[0].name">
                                 <div class="d-flex flex-column">
-                                    <div class="pe-none">Pablo Placeholder</div>
+                                    <div class="pe-none">{{contacts[0].name}}</div>
                                     <div class="pe-none my-light-gray">Ultimo accesso oggi alle</div>
                                 </div>
                             </div> 
@@ -64,20 +64,16 @@
                         </div>
                         <div id="chat-area"> <!-- Chat degli utenti -->
                             <div class="d-flex flex-row-reverse px-5 py-3">
-                                <div class="card sent">
+                                <div class="card sent"> <!-- Messaggi inviati -->
                                     <div class="card-body">
                                       Invio un messaggio placeholder
-                                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sed voluptas expedita veniam facere quidem ex, veritatis, earum vel eveniet magni doloremque aliquid distinctio alias, eaque iste recusandae accusamus harum!
-                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci deserunt architecto eos in necessitatibus harum commodi modi, fugiat eligendi possimus odio obcaecati laudantium suscipit, temporibus beatae fugit culpa. Qui, hic!
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex flex-row px-5 py-3">
-                                <div class="card recived">
+                                <div class="card recived"> <!-- Messaggi ricevuti -->
                                     <div class="card-body">
                                       Ricevo un messaggio placeholder
-                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quae eius odio vel. Doloribus fugit, nisi, rem ullam repellendus quam est porro nam eius, esse veniam unde praesentium voluptate. Adipisci?
-                                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem itaque accusamus nemo, iure laudantium delectus harum fuga sapiente neque saepe quam maiores praesentium sit quaerat ex ullam voluptates nobis aut.
                                     </div>
                                 </div>
                             </div>
