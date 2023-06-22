@@ -2,6 +2,7 @@
     --my-green: rgb(1,150,136);
     --my-gray: rgb(200, 200, 200);
     --my-light-blue: rgb(142,218,251);
+    --my-sent-color: rgb(213,250,186);
 }
 
 body {
@@ -46,7 +47,17 @@ i:hover{
 .form-control:focus {
     border-color: var(--my-gray);
     box-shadow: none;
-  }
+}
+
+.sent{
+    background-color: var(--my-sent-color);
+    max-width: 45%;
+}
+
+.recived{
+    background-color: white;
+    max-width: 45%;
+}
 
 
 /** CLASSI ESTETICHE RIUTILIZZATE **/
