@@ -6,7 +6,6 @@ const { createApp } = Vue;
 createApp({
     data(){
       return{
-        showSection: true,
         currentIndex: 0,
         user: {
           name: 'Nome Utente',

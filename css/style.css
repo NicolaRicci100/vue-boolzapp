@@ -59,8 +59,8 @@ i:hover{
     max-width: 45%;
 }
 
-.active{
-    display: inline-block;
+.none{
+    display: none;
 }
 
 
