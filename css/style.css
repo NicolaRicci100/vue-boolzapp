@@ -43,6 +43,11 @@ i:hover{
     opacity: 0.5;
 }
 
+.form-control:focus {
+    border-color: var(--my-gray);
+    box-shadow: none;
+  }
+
 
 /** CLASSI ESTETICHE RIUTILIZZATE **/
 .circle{ /* cerchio */
