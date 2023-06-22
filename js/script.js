@@ -6,6 +6,7 @@ const { createApp } = Vue;
 createApp({
     data(){
       return{
+        currentIndex: 0,
         user: {
           name: 'Nome Utente',
           avatar: '_io'
@@ -207,6 +208,10 @@ createApp({
     methods:{
       mountImg(person){
         return `img/avatar${person.avatar}.jpg`;
-      }
+      },
+      setIndex(targetIndex){
+        this.currentIndex = targetIndex;
+      },
     }
+    
 }).mount('#root');

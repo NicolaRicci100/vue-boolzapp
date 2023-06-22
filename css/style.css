@@ -59,6 +59,10 @@ i:hover{
     max-width: 45%;
 }
 
+.active{
+    display: block;
+}
+
 
 /** CLASSI ESTETICHE RIUTILIZZATE **/
 .circle{ /* cerchio */

@@ -41,7 +41,7 @@
                             <input class="form-control rounded-0 border-white" type="search" placeholder="Cerca o inizia una nuova chat">
                         </form>
                         <div id="my-contacts"> <!-- Contatti -->
-                            <div v-for="(contact,i) in contacts" class="d-flex align-items-center border-bottom border-light border-2 p-2">
+                            <div v-for="(contact,i) in contacts" @click="setIndex(i)" class="d-flex align-items-center border-bottom border-light border-2 p-2">
                                 <img class="d-none d-md-block mx-3 circle" :src="mountImg(contact)" :alt="contact.name">
                                 <div class="align-self-start pe-none">{{contact.name}}</div>
                             </div>
@@ -49,11 +49,11 @@
                     </section>
                     <section id="chat" class="col-8 g-0 d-flex flex-column"> <!-- Sezione Chat -->
                         <div class="d-flex justify-content-between align-items-center p-2 bg-light"> <!-- Testa della chat -->
-                            <div class="d-flex align-items-center"> <!-- Immagine, nome e informazioni accesso -->
-                                <img class="circle mx-2" :src="mountImg(contacts[0])" :alt="contacts[0].name">
+                            <div v-for="(contact,i) in contacts" class="d-flex align-items-center"> <!-- Immagine, nome e informazioni accesso -->
+                                <img class="circle mx-2" :src="mountImg(contacts[i])" :alt="contacts[i].name" v-show="currentIndex === i">
                                 <div class="d-flex flex-column">
-                                    <div class="pe-none">{{contacts[0].name}}</div>
-                                    <div class="pe-none my-light-gray">Ultimo accesso oggi alle</div>
+                                    <div class="pe-none" v-show="currentIndex === i">{{contacts[i].name}}</div>
+                                    <div class="pe-none my-light-gray" v-show="currentIndex === i">Ultimo accesso oggi alle</div>
                                 </div>
                             </div> 
                             <div class="d-flex fs-4 gap-3 px-3 my-light-gray"> <!-- Icone varie -->
