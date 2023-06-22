@@ -60,7 +60,7 @@ i:hover{
 }
 
 .active{
-    display: block;
+    display: inline-block;
 }
 
 

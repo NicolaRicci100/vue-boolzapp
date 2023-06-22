@@ -49,11 +49,11 @@
                     </section>
                     <section id="chat" class="col-8 g-0 d-flex flex-column"> <!-- Sezione Chat -->
                         <div class="d-flex justify-content-between align-items-center p-2 bg-light"> <!-- Testa della chat -->
-                            <div v-for="(contact,i) in contacts" class="d-flex align-items-center"> <!-- Immagine, nome e informazioni accesso -->
-                                <img class="circle mx-2" :src="mountImg(contacts[i])" :alt="contacts[i].name" v-show="currentIndex === i">
+                            <div v-for="(contact,i) in contacts" class="d-flex align-items-center" v-show="currentIndex === i"> <!-- Immagine, nome e informazioni accesso -->
+                                <img class="circle mx-2" :src="mountImg(contacts[i])" :alt="contacts[i].name">
                                 <div class="d-flex flex-column">
-                                    <div class="pe-none" v-show="currentIndex === i">{{contacts[i].name}}</div>
-                                    <div class="pe-none my-light-gray" v-show="currentIndex === i">Ultimo accesso oggi alle</div>
+                                    <div class="pe-none">{{contacts[i].name}}</div>
+                                    <div class="pe-none my-light-gray">Ultimo accesso oggi alle</div>
                                 </div>
                             </div> 
                             <div class="d-flex fs-4 gap-3 px-3 my-light-gray"> <!-- Icone varie -->
