@@ -59,8 +59,8 @@ i:hover{
     max-width: 45%;
 }
 
-.none{
-    display: none;
+#head-contacts{
+    display: flex;
 }
 
 
