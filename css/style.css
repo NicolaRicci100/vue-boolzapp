@@ -51,12 +51,11 @@ i:hover{
 
 .sent{
     background-color: var(--my-sent-color);
-    max-width: 45%;
+    flex-direction: row-reverse;
 }
 
-.recived{
+.received{
     background-color: white;
-    max-width: 45%;
 }
 
 #head-contacts{ 

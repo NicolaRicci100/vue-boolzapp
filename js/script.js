@@ -7,6 +7,7 @@ createApp({
     data(){
       return{
         currentIndex: 0,
+        writeMessage: '',
         user: {
           name: 'Nome Utente',
           avatar: '_io'
@@ -219,6 +220,15 @@ createApp({
       setIndex(targetIndex){
         this.currentIndex = targetIndex;
       },
+      sendMessage(){
+        if(!this.writeMessage) return;
+        const message = {
+          date: new Date().toLocaleString(),
+          message: this.writeMessage,
+          status: 'sent'
+        }
+        this.currentContact.messages.push(message)
+      }
     }
     
 }).mount('#root');
