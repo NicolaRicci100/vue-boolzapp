@@ -206,6 +206,11 @@ createApp({
       }
     },
 
+    computed:{
+     currentContact(){
+      return this.contacts[this.currentIndex];
+     }
+    },
     
     methods:{
       mountImg(person){
