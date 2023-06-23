@@ -215,17 +215,13 @@ createApp({
      filterName(){
       const theName = this.searchName.toLowerCase();
       console.log(theName);
+      return this.contacts.map((contact) => {
 
-      const contactsNames = this.contacts.map(contact => ({
-        name: contact.name,
-        avatar: contact.avatar,
-        id: contact.id
+        contact.visible = contact.name.toLowerCase().includes(theName);
+        return contact;
+      });
         
-      }));
-
-      return contactsNames.filter((contactName) => 
-      contactName.name.toLowerCase().includes(theName));
-     }
+     },
     },
     
     methods:{
