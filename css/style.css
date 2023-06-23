@@ -51,17 +51,17 @@ i:hover{
 
 .sent{
     background-color: var(--my-sent-color);
-    flex-direction: row-reverse;
+    align-self: flex-end;
 }
 
 .received{
     background-color: white;
+    align-self: flex-start;
 }
 
 #head-contacts{ 
     display: flex;
 }
-
 
 /** CLASSI ESTETICHE RIUTILIZZATE **/
 .circle{ /* cerchio */

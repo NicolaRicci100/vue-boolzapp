@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div id="chat-area"> <!-- Chat degli utenti -->
-                            <div v-for="message in currentContact.messages" class="d-flex px-5 py-3">
+                            <div v-for="message in currentContact.messages" class="d-flex flex-column px-5 py-3">
                                 <div class="card" :class="message.status"> <!-- Messaggi inviati -->
                                     <div class="card-body">
                                         {{message.message}}
