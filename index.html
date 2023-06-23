@@ -38,7 +38,7 @@
                         </div>
                         <form class="d-flex border border-5 border-light" role="search"> <!-- Barra di ricerca -->
                             <span class="pe-none input-group-text rounded-0 bg-white border-white"><i class="my-light-gray fa-solid fa-magnifying-glass"></i></span>
-                            <input class="form-control rounded-0 border-white" type="search" placeholder="Cerca o inizia una nuova chat">
+                            <input class="form-control rounded-0 border-white" type="search" placeholder="Cerca o inizia una nuova chat" v-model.trim="searchName">
                         </form>
                         <div id="my-contacts"> <!-- Contatti -->
                             <div v-for="(contact,i) in contacts" @click="setIndex(i)" class="d-flex align-items-center border-bottom border-light border-2 p-2">

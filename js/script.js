@@ -8,6 +8,7 @@ createApp({
       return{
         currentIndex: 0,
         writeMessage: '',
+        searchName: '',
         user: {
           name: 'Nome Utente',
           avatar: '_io'
@@ -210,6 +211,14 @@ createApp({
     computed:{
      currentContact(){
       return this.contacts[this.currentIndex];
+     },
+     filterName(){
+      const theName = this.searchName.toLowerCase();
+      console.log(theName);
+      const contactsNames = this.contacts.map(contact => contact.name);
+      return contactsNames.filter((contactName) =>{
+        return contactName.toLowerCase().includes(theName);
+      });
      }
     },
     
