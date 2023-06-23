@@ -62,11 +62,11 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div id="chat-area" v-for="(contact,i) in contacts" v-show="currentIndex === i"> <!-- Chat degli utenti -->
-                            <div class="d-flex flex-row-reverse px-5 py-3">
+                        <div id="chat-area"> <!-- Chat degli utenti -->
+                            <div v-for="message in contacts" class="d-flex flex-row-reverse px-5 py-3">
                                 <div class="card sent"> <!-- Messaggi inviati -->
                                     <div class="card-body">
-                                        {{contacts[i].messages[0].message}}
+                                        prova invio
                                     </div>
                                 </div>
                             </div>

@@ -206,12 +206,7 @@ createApp({
       }
     },
 
-    // computed:{
-    //   getMessage(){
-    //     contacts[i].message;
-    //   }
-    // },
-
+    
     methods:{
       mountImg(person){
         return `img/avatar${person.avatar}.jpg`;
