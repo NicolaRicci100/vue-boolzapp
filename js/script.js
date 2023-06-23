@@ -227,7 +227,18 @@ createApp({
           message: this.writeMessage,
           status: 'sent'
         }
-        this.currentContact.messages.push(message)
+        this.currentContact.messages.push(message);
+        this.writeMessage = '';
+
+        setTimeout(() => {
+          const answer = {
+          date: new Date().toLocaleString(),
+          message: 'OK!',
+          status: 'received'
+        }
+        this.currentContact.messages.push(answer);
+
+        }, 1000);
       }
     }
     
