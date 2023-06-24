@@ -248,6 +248,17 @@ createApp({
         }
         this.currentContact.messages.push(answer);
         }, 1000);
+      },
+      deleteMessage(index){
+        const message = this.currentContact.messages;
+        message.splice(index, 1);
+      },
+      closeNotification(){
+        const notification = document.getElementById("notification");
+        notification.classList.add ('d-none');
+        setTimeout(() =>{
+          alert('Le notifiche sono attive!');
+        }, 100);
       }
     }
     

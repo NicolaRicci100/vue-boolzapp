@@ -72,6 +72,12 @@ i:hover{
     color: gray;
 }
 
+.delete{
+    font-size: 10px;
+    top: 5px;
+    right: 5px;
+}
+
 /** CLASSI ESTETICHE RIUTILIZZATE **/
 .circle{ /* cerchio */
     min-width: 50px;

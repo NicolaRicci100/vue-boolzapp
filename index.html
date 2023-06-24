@@ -27,13 +27,13 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </header>
-                        <div class="d-flex align-items-center p-3 my-h-75 my-bg-light-blue"> <!-- Messaggio notifiche -->
-                            <div class="circle bg-white d-flex align-items-center justify-content-center"> <!-- Campanella -->
+                        <div id="notification" class="d-flex align-items-center p-3 my-h-75 my-bg-light-blue"> <!-- Messaggio notifiche -->
+                            <div class="circle bg-white d-flex align-items-center justify-content-center" @click="closeNotification"> <!-- Campanella -->
                                 <i class="fa-solid fa-bell-slash fs-4 my-light-blue"></i>
                             </div>
                             <div class="p-2"> <!-- Messaggio -->
                                 <div class="d-none d-lg-block fw-semibold pe-none">Ricevi notifiche di nuovi messaggi</div>
-                                <div class="d-none d-md-block"><a href="#" class="text-secondary">Attiva notifiche desktop</a></div>
+                                <div class="d-none d-md-block"><a href="#" class="text-secondary" @click="closeNotification">Attiva notifiche desktop</a></div>
                             </div>
                         </div>
                         <form class="d-flex border border-5 border-light" role="search"> <!-- Barra di ricerca -->
@@ -63,10 +63,11 @@
                             </div>
                         </div>
                         <div id="chat-area"> <!-- Chat degli utenti -->
-                            <div v-for="message in currentContact.messages" class="d-flex flex-column px-5 py-3">
-                                <div class="card shadow rounded-4" :class="message.status"> <!-- Messaggi inviati -->
+                            <div v-for="(message,i) in currentContact.messages" class="d-flex flex-column px-5 py-3">
+                                <div class="card shadow rounded-4 position-relative" :class="message.status"> <!-- Messaggi inviati -->
                                     <div class="card-body">{{message.message}}</div>
                                     <div class="date">{{message.date}}</div>
+                                    <button type="button" class="delete btn-close position-absolute shadow-none" @click="deleteMessage(i)"></button>
                                 </div>
                             </div>
                         </div>
