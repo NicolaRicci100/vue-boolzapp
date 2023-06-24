@@ -209,28 +209,26 @@ createApp({
     },
 
     computed:{
-     currentContact(){
+     currentContact(){ //trovare il contatto corrente usando l'indice
       return this.contacts[this.currentIndex];
      },
-     filterName(){
-      const theName = this.searchName.toLowerCase();
-      console.log(theName);
+     filteredName(){ //filtrare i nomi tra i contatti
+      const theWord = this.searchName.toLowerCase();
       return this.contacts.map((contact) => {
-
-        contact.visible = contact.name.toLowerCase().includes(theName);
+        contact.visible = contact.name.toLowerCase().includes(theWord);
         return contact;
       });  
      },
     },
     
     methods:{
-      mountImg(person){
+      mountImg(person){ // mostrare l'immagine del contatto
         return `img/avatar${person.avatar}.jpg`;
       },
-      setIndex(targetIndex){
+      setIndex(targetIndex){ // impostare l'indice a quello cercato
         this.currentIndex = targetIndex;
       },
-      sendMessage(){
+      sendMessage(){ // inviare un messaggio
         if(!this.writeMessage) return;
         const message = {
           date: new Date().toLocaleString(),
@@ -249,11 +247,11 @@ createApp({
         this.currentContact.messages.push(answer);
         }, 1000);
       },
-      deleteMessage(index){
+      deleteMessage(index){ // cancellare un messaggio
         const message = this.currentContact.messages;
         message.splice(index, 1);
       },
-      closeNotification(){
+      closeNotification(){ // chiudere/ablitare le notifiche
         const notification = document.getElementById("notification");
         notification.classList.add ('d-none');
         setTimeout(() =>{
