@@ -219,8 +219,7 @@ createApp({
 
         contact.visible = contact.name.toLowerCase().includes(theName);
         return contact;
-      });
-        
+      });  
      },
     },
     
@@ -248,7 +247,6 @@ createApp({
           status: 'received'
         }
         this.currentContact.messages.push(answer);
-
         }, 1000);
       }
     }

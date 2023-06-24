@@ -53,7 +53,7 @@
                                 <img class="circle mx-2" :src="mountImg(currentContact)" :alt="currentContact.name">
                                 <div class="d-flex flex-column">
                                     <div class="pe-none">{{currentContact.name}}</div>
-                                    <div class="pe-none my-light-gray">Ultimo accesso oggi alle</div>
+                                    <div class="pe-none my-light-gray">Ultimo accesso oggi</div>
                                 </div>
                             </div> 
                             <div class="d-flex fs-4 gap-3 px-3 my-light-gray"> <!-- Icone varie -->
@@ -64,7 +64,7 @@
                         </div>
                         <div id="chat-area"> <!-- Chat degli utenti -->
                             <div v-for="message in currentContact.messages" class="d-flex flex-column px-5 py-3">
-                                <div class="card shadow" :class="message.status"> <!-- Messaggi inviati -->
+                                <div class="card shadow rounded-4" :class="message.status"> <!-- Messaggi inviati -->
                                     <div class="card-body">{{message.message}}</div>
                                     <div class="date">{{message.date}}</div>
                                 </div>
